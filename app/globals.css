@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg: #0d1117;
+  --surface: #141c26;
+  --surface-soft: #1b2635;
+  --line: #2c3b50;
+  --text-main: #e6edf3;
+  --text-muted: #9eb0c6;
+  --brand: #3ba1ff;
+  --brand-strong: #2376cb;
+  --accent: #22d3a6;
+  --danger: #ff6b6b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-main);
+}
+
+body {
+  font-family: var(--font-display), sans-serif;
+  background-image:
+    radial-gradient(circle at 10% 0%, rgba(35, 118, 203, 0.25) 0, transparent 38%),
+    radial-gradient(circle at 90% 10%, rgba(34, 211, 166, 0.16) 0, transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(20, 28, 38, 0.95), rgba(20, 28, 38, 0.8));
+  border-radius: 1rem;
+}
+
+.badge {
+  border: 1px solid rgba(59, 161, 255, 0.4);
+  background: rgba(59, 161, 255, 0.12);
+  color: #cde8ff;
+}
+
+.button-primary {
+  background: linear-gradient(180deg, var(--brand), var(--brand-strong));
+  color: #f8fbff;
+}
+
+.button-primary:hover {
+  filter: brightness(1.08);
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+  color: var(--text-main);
+}
+
+.button-secondary:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.input-shell {
+  background: rgba(10, 16, 24, 0.7);
+  border: 1px solid var(--line);
+  color: var(--text-main);
+}
+
+.input-shell:focus {
+  outline: 2px solid rgba(59, 161, 255, 0.5);
+  outline-offset: 1px;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.status-pill {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.status-pending {
+  color: #f7c16f;
+}
+
+.status-active {
+  color: #89d9ff;
+}
+
+.status-completed {
+  color: #88e4bf;
+}
+
+.status-cancelled,
+.status-failed {
+  color: #ff9d9d;
+}
